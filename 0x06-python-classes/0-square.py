@@ -3,5 +3,13 @@
 """Defines a square"""
 
 class Square:
-    """Defines a square"""
+    """Defines a square.
+
+    Args:
+        None
+
+    Attributes:
+        None.
+
+    """
     pass
