@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """Write a class Rectangle that defines a rectangle by: (based on 1-rectangle.py)"""
+    """a class Rectangle that defines a rectangle"""
 
     def __init__(self, width=0, height=0):
         """Instantiation with optional width and height"""
@@ -66,5 +66,5 @@ class Rectangle:
         return("".join(rec))
 
     def __repr__(self):
-        """ return a string representation of the rectangle to be able to recreate a new instance by using eval()"""
+        """return a string representation of the rectangle"""
         return f"Rectangle({self.__width}, {self.__height})"
