@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """Write a class Rectangle that defines a rectangle by: (based on 1-rectangle.py)"""
+    """a class Rectangle that defines a rectangle"""
 
     number_of_instances = 0
 
@@ -18,7 +18,7 @@ class Rectangle:
     def width(self):
         """Private instance attribute: width"""
 
-        return self.__width
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -33,7 +33,7 @@ class Rectangle:
     def height(self):
         """Private instance attribute: height"""
 
-        return self.__height
+        return (self.__height)
 
     @height.setter
     def height(self, value):
@@ -66,14 +66,14 @@ class Rectangle:
             [rec.append('#') for j in range(self.__width)]
             if i != self.__height - 1:
                 rec.append("\n")
-        return("".join(rec))
+        return ("".join(rec))
 
     def __repr(self):
-        """return a string representation of the rectangle to be able to recreate a new instance by using eval()"""
+        """return a string representation of the rectangle"""
 
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        """Print the message Bye rectangle... when an instance of Rectangle is deleted"""
+        """Print the message Bye rectangle"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
