@@ -7,14 +7,12 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Instantiation with optional width and height"""
-
         self.width = width
         self.height = height
 
     @property
     def width(self):
         """Private instance attribute: width"""
-
         return self.__width
 
     @width.setter
@@ -29,7 +27,6 @@ class Rectangle:
     @property
     def height(self):
         """Private instance attribute: height"""
-
         return self.__height
 
     @height.setter
@@ -42,12 +39,10 @@ class Rectangle:
 
     def area(self):
         """returns the rectangle area"""
-
         return(self.__width * self.__height)
 
     def parameter(self):
         """returns the rectangle perimeter"""
-
         if self.__width == 0 or self.__height == 0:
             return (0)
 
@@ -55,11 +50,10 @@ class Rectangle:
 
     def __str__(self):
         """print the rectangle with the character #"""
-
         if self.__width == 0 or self.__height == 0:
             return ("")
+        
         rect = []
-
         for i in range(self.__height):
             [rect.append('#') for j in range(self.__width)]
             if i != self.__height:
