@@ -13,7 +13,7 @@ class Rectangle:
     @property
     def width(self):
         """Private instance attribute: width"""
-        return self.__width
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -27,7 +27,7 @@ class Rectangle:
     @property
     def height(self):
         """Private instance attribute: height"""
-        return self.__height
+        return (self.__height)
 
     @height.setter
     def height(self, value):
@@ -39,7 +39,7 @@ class Rectangle:
 
     def area(self):
         """returns the rectangle area"""
-        return(self.__width * self.__height)
+        return (self.__width * self.__height)
 
     def parameter(self):
         """returns the rectangle perimeter"""
@@ -52,14 +52,14 @@ class Rectangle:
         """print the rectangle with the character #"""
         if self.__width == 0 or self.__height == 0:
             return ("")
-        
+
         rect = []
         for i in range(self.__height):
             [rect.append('#') for j in range(self.__width)]
             if i != self.__height:
                 rect.append('\n')
-        return("".join(rect))
+        return ("".join(rect))
 
     def __repr__(self):
         """return a string representation of the rectangle"""
-        return f"Rectangle({self.__width}, {self.__height})"
+        return (f"Rectangle({self.__width}, {self.__height})")
