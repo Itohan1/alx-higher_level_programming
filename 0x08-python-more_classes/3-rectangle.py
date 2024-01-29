@@ -15,7 +15,7 @@ class Rectangle:
     def width(self):
         """Private instance attribute: width"""
 
-        return self.__width
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -30,7 +30,7 @@ class Rectangle:
     def height(self):
         """Private instance attribute: height"""
 
-        return self.__height
+        return (self.__height)
 
     @height.setter
     def height(self, value):
@@ -43,24 +43,24 @@ class Rectangle:
     def area(self):
         """returns the rectangle area"""
 
-        return(self.__width * self.__height)
+        return (self.__width * self.__height)
 
     def perimeter(self):
         """returns the rectangle perimeter"""
 
         if self.__width == 0 or self.__height == 0:
             return (0)
-        return(2 * (self.__width + self.__height))
+        return (2 * (self.__width + self.__height))
 
     def __str__(self):
         """print the rectangle with the character #"""
 
         if self.__width == 0 or self.__height == 0:
-            return("")
+            return ("")
 
         rect = []
         for i in range(self.__height):
             [rect.append('#') for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
-        return("".join(rect))
+        return ("".join(rect))

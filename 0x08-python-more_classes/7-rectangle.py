@@ -67,7 +67,7 @@ class Rectangle:
             [rec.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 rec.append("\n")
-        return("".join(rec))
+        return ("".join(rec))
 
     def __repr(self):
         """return a string representation of the rectangle to be able to recreate a new instance by using eval()"""
