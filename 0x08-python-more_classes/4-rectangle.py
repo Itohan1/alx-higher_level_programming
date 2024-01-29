@@ -7,6 +7,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Instantiation with optional width and height"""
+
         self.width = width
         self.height = height
 
@@ -67,6 +68,4 @@ class Rectangle:
 
     def __repr__(self):
         """return a string representation of the rectangle"""
-        rect = "Rectangle(" + str(self.__width)
-        rect += ", " + str(self.__height) + ")"
-        return (rect)
+        return f"Rectangle({self.__width}, {self.__height})"
