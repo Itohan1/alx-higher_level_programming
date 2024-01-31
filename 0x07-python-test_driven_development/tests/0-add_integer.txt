@@ -1,0 +1,113 @@
+===================================
+Using the "0-add_integer.py" module
+===================================
+
+This module defines a function that adds 2 integers add_integer(a, b=98)
+------------------------------------------------------------------------
+"0-add_integer" Returns an integer: the addition of a and b
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(4, 5)
+	9
+
+::
+
+	>>> add_integer(5, -4)
+	1
+
+The function works with negative values
+::
+
+	>>> add_integer(4.0, 5.0)
+	9
+
+Floats are casted to int before the function is performed
+
+::
+
+	>>> add_integer(5.2, -4)
+	1
+
+The second arguement is optional and it is 98 by default
+One-argument
+============
+
+::
+
+	>>> add_integer(2)
+	100
+
+::
+
+	>>> add_integer(0)
+	98
+
+::
+
+	>>> add_integer(-2)
+	96
+
+Not-Numbers
+============
+Both arguments are expected to be integers or floats but if otherwise a TypeError is raised:
+
+::
+
+	>>> add_integer("Hello", 4)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+::
+
+	>>> add_integer(5, "Hello")
+	Traceback (most recent call last):
+	TypeErrror: b must be an integer
+
+if both arguments are neither integers nor floats
+-------------------------------------------------
+
+::
+
+	>>> add_integer("Hello", "World")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Add_infinity
+============
+
+::
+
+	>>> add_integer(4, float('inf')
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+::
+
+	>>> add_integer(float('-inf'), 5)
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+arg_Invalid
+===========
+
+::
+
+	>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+::
+
+	>>> add_integer(None, None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+And with NAN numbers.
+
+::
+
+	>>> add_integer(4, float(NAN))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NAN to integer
