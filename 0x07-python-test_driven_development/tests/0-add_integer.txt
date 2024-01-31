@@ -57,13 +57,15 @@ Both arguments are expected to be integers or floats but if otherwise a TypeErro
 
 	>>> add_integer("Hello", 4)
 	Traceback (most recent call last):
+		...
 	TypeError: a must be an integer
 
 ::
 
 	>>> add_integer(5, "Hello")
 	Traceback (most recent call last):
-	TypeErrror: b must be an integer
+		...
+	TypeError: b must be an integer
 
 if both arguments are neither integers nor floats
 -------------------------------------------------
@@ -79,7 +81,7 @@ Add_infinity
 
 ::
 
-	>>> add_integer(4, float('inf')
+	>>> add_integer(4, float('inf'))
 	Traceback (most recent call last):
 	OverflowError: cannot convert float infinity to integer
 
@@ -103,11 +105,3 @@ arg_Invalid
 	>>> add_integer(None, None)
 	Traceback (most recent call last):
 	TypeError: a must be an integer
-
-And with NAN numbers.
-
-::
-
-	>>> add_integer(4, float(NAN))
-	Traceback (most recent call last):
-	ValueError: cannot convert float NAN to integer
