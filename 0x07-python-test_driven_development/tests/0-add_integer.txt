@@ -105,3 +105,13 @@ arg_Invalid
 	>>> add_integer(None, None)
 	Traceback (most recent call last):
 	TypeError: a must be an integer
+
+For Nan
+=======
+
+::
+
+	>>> add_integer(float(NaN))
+	Traceback (most recent call last):
+		...
+	NameError: name 'NaN' is not defined
