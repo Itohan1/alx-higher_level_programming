@@ -96,7 +96,7 @@ arg_Invalid
 
 ::
 
-	>> add_integer(None)
+	>>> add_integer(None)
 	Traceback (most recent call last):
 	TypeError: a must be an integer
 
