@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import unittest
 from models.base import Base
 """Write the class Rectangle that inherits from Base"""
 
