@@ -94,6 +94,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """Update the class Rectangle by updating the public method"""
         if args and len(args) != 0:
+            i = 0
             for arg in args:
                 if i == 0:
                     if arg is None:
@@ -108,6 +109,7 @@ class Rectangle(Base):
                     self.x = arg
                 elif i == 4:
                     self.y = arg
+                i += 1
 
         elif kwargs and len(kwargs) != 0:
             for key, value in kwargs.items():

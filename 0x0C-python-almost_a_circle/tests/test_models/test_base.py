@@ -1,4 +1,8 @@
-::
+#!/usr/bin/python3
+""""""
 
-    >>> Base = __import__('base').Base
-    >>> 
+class TestBase(unittest.Test):
+    """"""
+
+    def test_num_arg(self):
+
