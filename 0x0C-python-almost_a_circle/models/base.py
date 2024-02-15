@@ -1,12 +1,14 @@
 #!/usr/bin/python3
+"""Write the first class Base"""
 import json
 import csv
 import turtle
-"""Write the first class Base"""
 
 
 class Base:
-    """private class attribute"""
+    """private class attribute
+        Arg: id
+        Return: str"""
     __nb_objects = 0
 
     def __init__(self, id=None):
