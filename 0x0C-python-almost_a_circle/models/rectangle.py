@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-from models.base import Base
 """Write the class Rectangle that inherits from Base"""
+from models.base import Base
 
 
 class Rectangle(Base):
-    """"""
+    """Class Rectangle inherits from Base
+        Arg: width, height, x, y
+        Return : str"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """"""
