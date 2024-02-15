@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Write the first class Base"""
 import json
-import csv
-import turtle
 
 
 class Base:
