@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-from models.rectangle import Rectangle
 """Write the class Square that inherits from Rectangle"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Class Square inherits from Rectangle"""
+    """Class Square inherits from Rectangle
+        Args: size, x, y, id
+        Return: str"""
 
     def __init__(self, size, x=0, y=0, id=None):
         """Class constructor"""
