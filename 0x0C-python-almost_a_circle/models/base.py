@@ -23,7 +23,7 @@ class Base:
         """Update the class Base by adding the static method"""
 
         if list_dictionaries is None or list_dictionaries == []:
-            return ([])
+            return ("[]")
         else:
             return (json.dumps(list_dictionaries))
 
