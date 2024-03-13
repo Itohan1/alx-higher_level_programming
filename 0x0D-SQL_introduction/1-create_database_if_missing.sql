@@ -1,4 +1,5 @@
-#!/bin/bash
--- Write a script that creates the database
+-- Write a script that creates the database hbtn_0c_0 in your MySQL server
 
-CREATE DATABASE IF NOT EXISTS hbtn_oc_0;
+Use mysql
+DROP DATABASE IF EXISTS hbtn_0c_0;
+CREATE DATABASE hbtn_0c_0;
