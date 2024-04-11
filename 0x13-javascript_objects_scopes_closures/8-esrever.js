@@ -3,7 +3,7 @@
 exports.esrever = function (list) {
   const reversedlist = [];
 
-  for (let i = list.length; i >= 0; i--) {
+  for (let i in list) {
     if (list[i] === undefined) {
     }
     reversedlist.push(list[i]);
