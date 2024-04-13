@@ -15,7 +15,10 @@ if __name__ == '__main__':
     )
 
     curr = conn.cursor()
-    curr.execute(f"SELECT * FROM {sys.argv[3]}.states WHERE states.name LIKE 'N%' ORDER BY states.id ASC")
+    curr.execute(
+            f"SELECT * FROM {sys.argv[3]}.states WHERE BINARY
+            states.name LIKE 'N%' ORDER BY states.id ASC"
+    )
     q_rows = curr.fetchall()
 
     for rows in q_rows:
