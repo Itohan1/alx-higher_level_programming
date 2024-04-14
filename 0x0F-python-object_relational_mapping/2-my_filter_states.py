@@ -17,7 +17,7 @@ if __name__ == '__main__':
     curr = conn.cursor()
     curr.execute(
         """SELECT * FROM {}.states
-        WHERE states.name='{}'
+        WHERE states.name="{}"
         ORDER BY states.id ASC"""
         .format(sys.argv[3], sys.argv[4])
     )
