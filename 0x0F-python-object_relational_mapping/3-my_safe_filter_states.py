@@ -15,12 +15,14 @@ if __name__ == '__main__':
     )
 
     curr = conn.cursor()
-    curr.execute(
-        """SELECT * FROM {}.states
-        WHERE BINARY states.name = "{}"
-        ORDER BY states.id ASC"""
-        .format(sys.argv[3], sys.argv[4])
-    )
+    query = """SELECT * FROM states
+        WHERE BINARY name = %s
+        ORDER BY id ASC"""
+
+    search = sys.argv[4]
+
+    curr.execute(query, (search,))
+
     q_rows = curr.fetchall()
 
     for rows in q_rows:
