@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""sqlalchemy declaration"""
+"""Write a python file that contains the class definition """
 
 
 from sqlalchemy import Column, Integer, String
