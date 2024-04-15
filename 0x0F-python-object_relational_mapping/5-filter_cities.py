@@ -29,8 +29,8 @@ def con_injection(user, passwd, db):
 
     rows = cur.fetchall()
 
-    for row in rows:
-        print(row)
+    v = [value[0] for value in rows]
+    print(", ".join(v))
 
     cur.close()
     conn.close()
