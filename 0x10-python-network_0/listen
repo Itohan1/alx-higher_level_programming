@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo sed -i 's/listen_port = [0-9]\+/listen_port = 5000/' /etc/service/service.conf
+
+sudo systemctl restart netstat
