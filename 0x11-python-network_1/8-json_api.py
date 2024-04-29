@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""""
+"""Write a Python script that takes in a letter and sends"""
 import requests
 import sys
 
