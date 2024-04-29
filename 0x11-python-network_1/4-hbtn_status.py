@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """Write a Python script that fetches"""
-import urllib.request
+import requests
 
 if __name__ == "__main__":
     url = 'https://alx-intranet.hbtn.io/status'
-    with urllib.request.urlopen(url) as response:
-        body = response.read()
+    body = requests.get(url)
+    if body.status_code == 200:
         print("Body response:")
-        print(f"\t - type: {type(body)}")
-        print(f"\t - content: {body}")
+        print(f"\t - type: {type(body.text)}")
+        print(f"\t - content: {body.text}")
