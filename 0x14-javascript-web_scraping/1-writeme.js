@@ -5,6 +5,6 @@ const name = process.argv[2];
 
 const fs = require('fs');
 
-fs.writeFile('my_file.txt', name, err => {
+fs.writeFile('my_file.txt', name, 'utf-8', err => {
   if (err) throw err;
 });
