@@ -1,9 +1,12 @@
 #!/usr/bin/node
-//
+// Write a script that display the status code of a GET request
 
-const apiRequest = () => {
-  const url = process.argv[2];
-  fetch(url)
-    .then((response) => Promise.all([response.status, response.json()]))
-    .then(([status, data]) => console.log({ status, data }));
-};
+const request = require('request');
+
+const name = process.argv[2];
+
+request(name, (error, response) => {
+  if (error) console.log(error);
+
+  console.log('code:', response.statusCode);
+});
