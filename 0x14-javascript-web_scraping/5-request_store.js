@@ -8,7 +8,7 @@ const name = process.argv[2];
 request(name, (err, response, body) => {
   if (err) console.error(err);
 
-  fs.writeFile('loripsum', body, err => {
+  fs.writeFile('loripsum', body, 'utf-8', err => {
     if (err) console.error(err);
   });
 });
