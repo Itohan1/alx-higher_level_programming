@@ -1,0 +1,20 @@
+#!/usr/bin/node
+//
+
+const request = require('request');
+const url = process.argv[2];
+
+request(url, { json: true }, (err, response, body) => {
+  if (err) console.error(err);
+
+  const vare = body.results;
+
+  const fullink = 'https://swapi-api.alx-tools.com/api/people/14/';
+  let count = 0;
+  for (let chars of vare) {
+    if (chars.characters.includes(fullink)) {
+	    count++;
+    }
+  }
+  console.log(count);
+});
