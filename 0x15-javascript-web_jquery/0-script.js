@@ -1,5 +1,3 @@
+const anodacolor = document.querySelector('header');
 
-function changecolor() {
-  let name = "#FF0000"
-  return(name);
-}
+anodacolor.style.color = '#FF0000';
